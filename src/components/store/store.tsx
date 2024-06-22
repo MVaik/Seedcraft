@@ -35,7 +35,7 @@ export const StoreItem: Component<{ seed: Seed; nextSeedPrice: number }> = (
       >
         <span class={styles["seed__price"]}>
           <img
-            src="/src/assets/emerald.webp"
+            src="/assets/emerald.webp"
             width={24}
             height={24}
             alt="Emerald"
@@ -53,7 +53,7 @@ export const StoreItem: Component<{ seed: Seed; nextSeedPrice: number }> = (
         <span class={styles.arrow}></span>
         <img
           class={styles["seed"]}
-          src={`/src/assets/flower-${props.seed.type}.webp`}
+          src={`/assets/flower-${props.seed.type}.webp`}
           width={35}
           height={35}
           alt={`${props.seed.type} Flower`}
@@ -76,12 +76,7 @@ export const Store: Component<{ nextSeedPrice: number }> = (props) => {
         onClick={() => modalRef?.showModal()}
       >
         Store
-        <img
-          src="/src/assets/emerald.webp"
-          width={24}
-          height={24}
-          alt="Emerald"
-        />
+        <img src="/assets/emerald.webp" width={24} height={24} alt="Emerald" />
       </button>
       <dialog class={styles.modal} ref={modalRef}>
         <div class={styles.header}>

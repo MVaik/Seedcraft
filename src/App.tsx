@@ -136,7 +136,7 @@ const App: Component = () => {
         <div class={styles["hud__text"]}>
           Balance: {emeralds()}
           <img
-            src="/src/assets/emerald.webp"
+            src="/assets/emerald.webp"
             width={24}
             height={24}
             alt="Emerald"
@@ -145,7 +145,7 @@ const App: Component = () => {
         <div class={styles["hud__text"]}>
           Next plot: {plotPrice()}
           <img
-            src="/src/assets/emerald.webp"
+            src="/assets/emerald.webp"
             width={24}
             height={24}
             alt="Emerald"

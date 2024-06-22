@@ -105,7 +105,7 @@ const PlotCell: Component<{
         >
           <img
             class={styles["flower__img"]}
-            src={`/src/assets/flower-${props.plot.seed?.type}.webp`}
+            src={`/assets/flower-${props.plot.seed?.type}.webp`}
             width={35}
             height={35}
             alt={`${props.plot.seed?.type} Flower`}
