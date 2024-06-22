@@ -9,7 +9,7 @@ import {
 import styles from "./store.module.scss";
 import { Seed } from "../../lib/models/farm.model";
 import { SeedInfo } from "../seed-info/seed-info";
-
+import emeraldUrl from "/assets/emerald.webp";
 export const StoreItem: Component<{ seed: Seed; nextSeedPrice: number }> = (
   props
 ) => {
@@ -34,12 +34,7 @@ export const StoreItem: Component<{ seed: Seed; nextSeedPrice: number }> = (
         onMouseLeave={() => setIsHovering(false)}
       >
         <span class={styles["seed__price"]}>
-          <img
-            src="/assets/emerald.webp"
-            width={24}
-            height={24}
-            alt="Emerald"
-          />
+          <img src={emeraldUrl} width={24} height={24} alt="Emerald" />
           <span
             class={styles["seed__price-text"]}
             classList={{
@@ -53,7 +48,9 @@ export const StoreItem: Component<{ seed: Seed; nextSeedPrice: number }> = (
         <span class={styles.arrow}></span>
         <img
           class={styles["seed"]}
-          src={`/assets/flower-${props.seed.type}.webp`}
+          src={`${import.meta.env.BASE_URL}/assets/flower-${
+            props.seed?.type
+          }.webp`}
           width={35}
           height={35}
           alt={`${props.seed.type} Flower`}
@@ -76,7 +73,7 @@ export const Store: Component<{ nextSeedPrice: number }> = (props) => {
         onClick={() => modalRef?.showModal()}
       >
         Store
-        <img src="/assets/emerald.webp" width={24} height={24} alt="Emerald" />
+        <img src={emeraldUrl} width={24} height={24} alt="Emerald" />
       </button>
       <dialog class={styles.modal} ref={modalRef}>
         <div class={styles.header}>

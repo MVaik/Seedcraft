@@ -2,6 +2,7 @@ import { Component } from "solid-js";
 import { Seed } from "../../lib/models/farm.model";
 import styles from "./seed-info.module.scss";
 import { emeralds } from "../../lib/state/farm.state";
+import emeraldUrl from "/assets/emerald.webp";
 export const SeedInfo: Component<{ seed: Seed }> = (props) => {
   return (
     <div class={styles.info}>
@@ -18,24 +19,14 @@ export const SeedInfo: Component<{ seed: Seed }> = (props) => {
           >
             {props.seed.cost}
           </span>
-          <img
-            src="/assets/emerald.webp"
-            width={24}
-            height={24}
-            alt="Emerald"
-          />
+          <img src={emeraldUrl} width={24} height={24} alt="Emerald" />
         </span>
         <span class={styles["info__text"]}>
           Growth duration: {props.seed.growthDuration / 1000}s
         </span>
         <span class={styles["info__text"]}>
           Value: {props.seed.value}{" "}
-          <img
-            src="/assets/emerald.webp"
-            width={24}
-            height={24}
-            alt="Emerald"
-          />
+          <img src={emeraldUrl} width={24} height={24} alt="Emerald" />
         </span>
       </div>
     </div>

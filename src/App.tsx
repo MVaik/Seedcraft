@@ -29,7 +29,7 @@ import {
   storageKey,
 } from "./lib/state/farm.state";
 import { Store } from "./components/store/store";
-
+import emeraldUrl from "/assets/emerald.webp";
 export const PlantingContext = createContext<{
   plantSeed: (seed: Seed) => void;
   canBuyPlot: boolean;
@@ -135,21 +135,11 @@ const App: Component = () => {
       <div class={styles.hud}>
         <div class={styles["hud__text"]}>
           Balance: {emeralds()}
-          <img
-            src="/assets/emerald.webp"
-            width={24}
-            height={24}
-            alt="Emerald"
-          />
+          <img src={emeraldUrl} width={24} height={24} alt="Emerald" />
         </div>
         <div class={styles["hud__text"]}>
           Next plot: {plotPrice()}
-          <img
-            src="/assets/emerald.webp"
-            width={24}
-            height={24}
-            alt="Emerald"
-          />
+          <img src={emeraldUrl} width={24} height={24} alt="Emerald" />
         </div>
       </div>
       <Store nextSeedPrice={nextSeedPrice()} />
